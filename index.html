@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Train Scheduler</title>
+
+      <!-- Firebase Reference -->
+      <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Moment.js Reference -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+
+        <div class="row text-center p-2 bg-secondary text-white mb-3 mx-auto rounded">
+            <h1>Listening Log</h1>
+        </div>
+
+        <div class="row bg-primary text-white rounded-top mx-auto pl-2 py-2 font-weight-bold">Add Entry</div>
+            <form class="border border-primary p-2 pt-3 mb-3 ">
+                <div class="form-group">
+                    <label for="date">Date</label>
+                    <input type="text" class="form-control" id="dateInput" aria-describedby="dateHelp">
+                </div>
+                <div class="form-group">
+                    <label for="piece">Piece/Album</label>
+                    <input type="text" class="form-control" id="pieceInput" aria-describedby="pieceHelp">
+                </div>
+                <div class="form-group">
+                    <label for="composer">Composer</label>
+                    <input type="text" class="form-control" id="composerInput" aria-describedby="composerHelp">
+                </div>
+                <div class="form-group">
+                    <label for="performer">Performer(s)</label>
+                    <input type="text" class="form-control" id="performerInput" aria-describedby="performerHelp">
+                </div>
+                <div class="form-group">
+                    <label for="comment">Comment</label>
+                    <input type="text" class="form-control" id="commentInput" aria-describedby="commentHelp">
+                </div>
+                <button type="submit" class="btn btn-primary" id="add-piece-btn">Submit</button>
+            </form>
+
+
+
+
+
+
+
+        <div class="row bg-primary text-white rounded-top mx-auto pl-2 py-2 font-weight-bold">Current Train Schedule</div>
+        <div class="table-responsive">
+            <table class="table table-hover table-sm border border-primary">
+                <thead class="thead-dark">
+                    <tr>
+                        <!-- The scope attribute specifies that this is a header for a column -->
+                        <th scope="col">Date</th>
+                        <th scope="col">Piece/Album</th>
+                        <th scope="col">Composer</th>
+                        <th scope="col">Performer(s)</th>
+                        <th scope="col">Comment</th>
+                    </tr>
+                </thead>
+                <tbody class="fontSize">
+                    <tr>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+  <!-- Script -->
+  <script src="logic.js"></script>
+
+
+</body>
+
+</html>
